@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="Form.css">
+    <script src="Form.js"></script>
+</head>
+<body>
+
+    <marquee direction="left"><b>Apply Now</b> </marquee><br>
+
+<form name="contactForm" onsubmit="return validateForm()">
+    <h2 class="font1">Application Form</h2>
+    <div class="row">
+        <label class="font1">Full Name</label>
+        <input type="text" name="name">
+        <div class="error" id="nameErr"></div>
+    </div>
+    <div class="row">
+        <label class="font1">Email Address</label>
+        <input type="text" name="email">
+        <div class="error" id="emailErr"></div>
+    </div>
+    <div class="row">
+        <label class="font1">Mobile Number</label>
+        <input type="text" name="mobile" maxlength="10">
+        <div class="error" id="mobileErr"></div>
+    </div>
+    <div class="row">
+        <label  class="font1">Country</label>
+        <select name="country">
+            <option class="font1">Select</option>
+            <option class="font1">Australia</option>
+            <option class="font1">India</option>
+            <option class="font1">United States</option>
+            <option class="font1">United Kingdom</option>
+        </select> 
+        <div class="error" id="countryErr"></div>
+    </div>
+    <div class="row">
+        <label class="font1">Gender</label>
+        <div class="form-inline">
+            <label class="font1"><input type="radio" name="gender" value="male"> Male</label>
+            <label class="font1"><input type="radio" name="gender" value="female"> Female</label> 
+        </div>
+        <div class="error" id="genderErr"></div>
+    </div>
+    <div class="row">
+        <label class="font1">Hobbies <i>(Optional)</i></label>
+        <div class="form-inline">
+            <label class="font1"><input type="checkbox" name="hobbies[]" value="sports"> Sports</label>
+            <label class="font1"><input type="checkbox" name="hobbies[]" value="movies"> Movies</label>
+            <label class="font1"><input type="checkbox" name="hobbies[]" value="music"> Music</label>  
+        </div>
+    </div>        
+    <div class="row font1">
+        <input type="submit" value="Submit">
+    </div>
+</form>
+</body>
+</html>
